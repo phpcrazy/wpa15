@@ -1,0 +1,52 @@
+.header {
+	width: auto;
+	height: 123px;
+	background: url( ../img/header-bg.jpg ) repeat;
+}
+
+.logo {
+	text-align: justify;
+}
+
+.logo a {
+	position: relative;
+	/*vertical-align: middle;*/
+	top: 50px;
+	padding: 0px 0px 0px 80px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.logo a:hover {
+	color: #000;
+}
+
+.header-content1 {
+	float: left;
+}
+
+.para-align {
+	text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar-color-yellow, .navbar-color-yellow .navbar-brand {
+			color: #669900 !important;
+}
+
+
+.login {
+	padding: 0px 0px 0px 25px;
+}
