@@ -1,26 +1,36 @@
 <?php 
+// Part 1
+define('DD', __DIR__ . '/../'); 
+require DD . 'wpa15/Application.php';
 
-var_dump(__DIR__);
-define('DD', __DIR__ . '/../');
-$data = array(
-	'title'			=> 'Myanmar Links',
-	'another_title'	=> 'Myanmar Tutorials',
-	'class'	=> array(
-		'wpa1', 'wpa2', 'wpa3'
-		)
-	);
+isset($_GET['page']) ? $page = $_GET['page'] : $page = 'home';
 
-echo load_view('home', $data);
+// if(isset($page != $_GET['page'])) {
+// 	$page = 'home';
+// }
 
-function load_view($view, $data = null) {
-	ob_start();
-	if($data != null) {
-		extract($data);
-	}
-	require DD . 'app/views/' . $view . '.php';
-	// ob_end_flush();
-	$html = ob_get_clean(); // ob_end_flush()
-	return $html;
+// if($page == 'home') {
+// 	require DD . 'app/controllers/HomeController.php';
+// } else if($page == 'blog') {
+// 	require DD . 'app/controllers/BlogController.php';
+// } else {
+// 	echo "404 Not Found!";
+// }
+
+switch($page) {
+	case "home":
+		require DD . 'app/controllers/HomeController.php';
+		break;
+	case "blog":
+		require DD . 'app/controllers/BlogController.php';
+		break;
+	case "about-us":
+		require DD . 'app/controllers/AboutController.php';
+		break;
+	default:
+		echo "404 Not Found!";
+		break;
 }
 
- ?>
+
+?>
