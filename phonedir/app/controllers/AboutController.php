@@ -1,5 +1,7 @@
 <?php 
 
-echo load_view('about');
+function AboutController() {
+	echo load_view('about');
+}
 
  ?>

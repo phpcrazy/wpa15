@@ -1,5 +1,8 @@
 <?php 
 
-echo load_view('blog');
+function BlogController() {
+	echo load_view('blog');	
+}
+
 
  ?>
