@@ -1,10 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Testing from Home</title>
-</head>
-<body>
+<?php echo load_view('layouts/header'); ?>
 	<h1><?php echo $title; ?></h1>
 	<h1><?php echo $another_title; ?></h1>
 	<h2><?php echo "How are you?"; ?></h2>
@@ -13,5 +7,4 @@
 		<?php echo $c; ?><br />
 	<?php endforeach; ?>
 	<h1>Hello from Home</h1>
-</body>
-</html>
+<?php echo load_view('layouts/footer'); ?>

@@ -16,6 +16,10 @@ return array(
 	array(
 		'_route'		=> 'aung-aung',
 		'_controller'	=> 'AungController'
+		),
+	array(
+		'_route'		=> 'contact',
+		'_controller'	=> 'ContactController'
 		)
 	);
 
